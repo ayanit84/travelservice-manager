@@ -1,0 +1,7 @@
+{
+	"offices" : 
+	[ 
+		{ "officeId": "56", "city": "Bhubaneswar", "state": "Odisha", "country": "India", "addressLine": "E/4,Patia", "zip": "751024" },
+		{ "officeId": "57", "city": "Bhubaneswar", "state": "Odisha", "country": "India", "addressLine": "E/4,Patia", "zip": "751024" }
+	]
+}
