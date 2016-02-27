@@ -26,12 +26,13 @@
         "mobile": "9568745258",
         "office": "123-159-426"
       },
-      "email": [
-        "sumit_p_kumar@infosys.com",
-        "sumit_p_kumar@apple.com"
-      ],
+      "emails": {
+        "main": "sumit_p_kumar@infosys.com",
+        "client": "sumit_p_kumar@apple.com"
+      },
       "Unit": "MFG",
       "Designation": "Technology Analyst",
       "officeId": "56"
+    }
   ]
 }
