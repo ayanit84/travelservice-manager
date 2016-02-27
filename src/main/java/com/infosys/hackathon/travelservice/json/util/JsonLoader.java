@@ -22,7 +22,7 @@ public class JsonLoader<T extends JsonContainer> {
 			InputStream is = ClassLoader.getSystemResourceAsStream(jsonPath);
 			return objectMapper.readValue(is, clazz);
 		} catch (IOException e) {
-			throw new JsonDatabaseException();
+			throw new JsonDatabaseException(e.getMessage());
 		}
 
 	}

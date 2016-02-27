@@ -11,6 +11,8 @@ import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 public class DirectoryOfficeJsonProcessor implements
 	JsonProcessor<EmployeeOfficeAddressContainer, EmployeeOfficeAddress> {
 
+	private static final String JSON_DATABASE = "jsondata/directory/office.json";
+
 	private EmployeeOfficeAddressContainer jsonContainer;
 
 	private JsonLoader<EmployeeOfficeAddressContainer> jsonLoader;
@@ -21,7 +23,7 @@ public class DirectoryOfficeJsonProcessor implements
 
 	@Override
 	public String getJsonFileName() {
-		return "jsondata/directory/office.json";
+		return JSON_DATABASE;
 	}
 
 	@Override
@@ -36,4 +38,16 @@ public class DirectoryOfficeJsonProcessor implements
 		return this.jsonContainer.getOffices();
 	}
 
+	public static void main(String[] args) {
+		try {
+			DirectoryOfficeJsonProcessor proc = new DirectoryOfficeJsonProcessor();
+			List<EmployeeOfficeAddress> ofc = proc.getData();
+			for (EmployeeOfficeAddress employeeOfficeAddress : ofc) {
+				System.out.println(employeeOfficeAddress);
+			}
+		} catch (JsonDatabaseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }

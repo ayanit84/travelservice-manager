@@ -1,5 +1,5 @@
 {
-  "employee": [
+  "employees": [
     {
       "firstName": "Amit P",
       "lastName": "Kumar",
@@ -9,21 +9,13 @@
         "mobile": "9568745219",
         "office": "123-159-478"
       },
-      "email": [
+      "emails": {
         "main": "amit_p_kumar@infosys.com",
         "client": "amit_p_kumar@apple.com"
-      ],
-      "Unit": "MFG",
-      "Designation": "Technology Analyst",
-      "OfficeId": "56"
-      "Office": {
-        "OfficeId": "56",
-        "City": "Bhubaneswar",
-        "State": "Odisha",
-        "Country": "India",
-        "AddressLine": "E/4,Patia",
-        "Zip": "751024"
-      }
+      },
+      "unit": "MFG",
+      "designation": "Technology Analyst",
+      "officeId": "56"
     }
   ]
 }
