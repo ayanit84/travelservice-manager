@@ -2,8 +2,15 @@ package com.infosys.hackathon.travelservice.json.processors;
 
 import java.util.List;
 
-public interface JsonProcessor<T> {
+import com.infosys.hackathon.services.JsonContainer;
+import com.infosys.hackathon.services.JsonData;
+import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
+
+public interface JsonProcessor<T extends JsonContainer, V extends JsonData> {
+
 	public String getJsonFileName();
 
-	public List<T> getData();
+	public T getContainer();
+
+	public List<V> getData() throws JsonDatabaseException;
 }
