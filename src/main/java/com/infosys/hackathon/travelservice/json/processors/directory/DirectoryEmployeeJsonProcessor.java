@@ -2,14 +2,17 @@ package com.infosys.hackathon.travelservice.json.processors.directory;
 
 import java.util.List;
 
-import com.infosys.hackathon.services.directory.EmployeDirectoryInformation;
+import org.springframework.stereotype.Component;
+
+import com.infosys.hackathon.services.directory.EmployeeDirectoryInformation;
 import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
 import com.infosys.hackathon.travelservice.json.containers.EmployeeDirectoryInformationContainer;
 import com.infosys.hackathon.travelservice.json.processors.JsonProcessor;
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
+@Component
 public class DirectoryEmployeeJsonProcessor implements
-	JsonProcessor<EmployeeDirectoryInformationContainer, EmployeDirectoryInformation> {
+	JsonProcessor<EmployeeDirectoryInformationContainer, EmployeeDirectoryInformation> {
 	private static final String JSON_DATABASE = "jsondata/directory/employee.json";
 
 	private EmployeeDirectoryInformationContainer jsonContainer;
@@ -31,7 +34,7 @@ public class DirectoryEmployeeJsonProcessor implements
 	}
 
 	@Override
-	public List<EmployeDirectoryInformation> getData()
+	public List<EmployeeDirectoryInformation> getData()
 		throws JsonDatabaseException {
 		this.jsonContainer = this.jsonLoader.load(getJsonFileName(),
 			EmployeeDirectoryInformationContainer.class);
@@ -41,8 +44,8 @@ public class DirectoryEmployeeJsonProcessor implements
 	public static void main(String[] args) {
 		try {
 			DirectoryEmployeeJsonProcessor proc = new DirectoryEmployeeJsonProcessor();
-			List<EmployeDirectoryInformation> ofc = proc.getData();
-			for (EmployeDirectoryInformation employeeOfficeAddress : ofc) {
+			List<EmployeeDirectoryInformation> ofc = proc.getData();
+			for (EmployeeDirectoryInformation employeeOfficeAddress : ofc) {
 				System.out.println(employeeOfficeAddress);
 			}
 		} catch (JsonDatabaseException e) {

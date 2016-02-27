@@ -2,12 +2,15 @@ package com.infosys.hackathon.travelservice.json.processors.directory;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.infosys.hackathon.services.directory.EmployeeOfficeAddress;
 import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
 import com.infosys.hackathon.travelservice.json.containers.EmployeeOfficeAddressContainer;
 import com.infosys.hackathon.travelservice.json.processors.JsonProcessor;
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
+@Component
 public class DirectoryOfficeJsonProcessor implements
 	JsonProcessor<EmployeeOfficeAddressContainer, EmployeeOfficeAddress> {
 
