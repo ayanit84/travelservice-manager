@@ -12,14 +12,14 @@ import com.infosys.hackathon.travelservice.json.containers.EmployeeOfficeAddress
 
 public class JsonLoader<T extends JsonContainer> {
 
-	public T load(String jsonPath, Class<T> clazz)
-		throws JsonDatabaseException {
+	public T load(String jsonPath, Class<T> clazz) throws JsonDatabaseException {
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
 			objectMapper.configure(
-				DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+					DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
-			InputStream is = ClassLoader.getSystemResourceAsStream(jsonPath);
+			InputStream is = clazz.getClassLoader().getResourceAsStream(
+					jsonPath);
 			return objectMapper.readValue(is, clazz);
 		} catch (IOException e) {
 			throw new JsonDatabaseException(e.getMessage());
@@ -31,8 +31,8 @@ public class JsonLoader<T extends JsonContainer> {
 		try {
 			JsonLoader<EmployeeOfficeAddressContainer> loader = new JsonLoader<EmployeeOfficeAddressContainer>();
 			EmployeeOfficeAddressContainer offices = loader.load(
-				"jsondata/directory/office.json",
-				EmployeeOfficeAddressContainer.class);
+					"jsondata/directory/office.json",
+					EmployeeOfficeAddressContainer.class);
 			for (EmployeeOfficeAddress ofc : offices.getOffices()) {
 				System.out.println(ofc);
 			}

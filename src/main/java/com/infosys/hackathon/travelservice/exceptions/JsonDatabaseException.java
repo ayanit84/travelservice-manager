@@ -1,6 +1,6 @@
 package com.infosys.hackathon.travelservice.exceptions;
 
-public class JsonDatabaseException extends Exception {
+public class JsonDatabaseException extends TravelAssistException {
 
 	private static final long serialVersionUID = 1L;
 
