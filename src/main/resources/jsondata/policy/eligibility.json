@@ -1,0 +1,36 @@
+{
+  "eligibility": [
+    {
+      "US,4": {
+        "leave": "20",
+        "compensation": "71471",
+        "childEducationReimburse": "2500",
+        "medicalExpenseReimburse": "3500"
+      },
+      "US,5": {
+        "leave": "20",
+        "compensation": "75000",
+        "childEducationReimburse": "2500",
+        "medicalExpenseReimburse": "3500"
+      },
+      "US,6": {
+        "leave": "20",
+        "compensation": "85000",
+        "childEducationReimburse": "3500",
+        "medicalExpenseReimburse": "4500"
+      },
+      "UK,3": {
+        "leave": "20",
+        "compensation": "20000",
+        "childEducationReimburse": "1000",
+        "medicalExpenseReimburse": "200"
+      },
+      "UK,4": {
+        "leave": "20",
+        "compensation": "40000",
+        "childEducationReimburse": "5000",
+        "medicalExpenseReimburse": "2000"
+      }
+    }
+  ]
+}
