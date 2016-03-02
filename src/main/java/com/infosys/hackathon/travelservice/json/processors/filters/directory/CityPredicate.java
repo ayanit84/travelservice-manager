@@ -1,4 +1,4 @@
-package com.infosys.hackathon.travelservice.json.processors.filters;
+package com.infosys.hackathon.travelservice.json.processors.filters.directory;
 
 import org.springframework.cglib.core.Predicate;
 

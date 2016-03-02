@@ -3,6 +3,7 @@
     {
       "firstName": "Amit P",
       "lastName": "Kumar",
+      "jobLevel": "4",
       "empNo": "123451",
       "phones": {
         "home": "06742589647",
@@ -20,6 +21,7 @@
     {
       "firstName": "sumit P",
       "lastName": "Kumar",
+      "jobLevel": "5",
       "empNo": "123452",
       "phones": {
         "home": "06742589756",

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.infosys.hackathon.services.JsonContainer;
 import com.infosys.hackathon.services.JsonData;
+import com.infosys.hackathon.services.contact.ContactInformation;
 import com.infosys.hackathon.travelservice.exceptions.JsonLookupException;
 
 public interface JsonProcessor<T extends JsonContainer, V extends JsonData> {
@@ -17,4 +18,5 @@ public interface JsonProcessor<T extends JsonContainer, V extends JsonData> {
 
 	public List<V> lookup(Map<String, Object> searchParams)
 			throws JsonLookupException;
+
 }
