@@ -1,16 +1,13 @@
 package com.infosys.hackathon.travelservice.exceptions;
 
+import com.infosys.hackathon.services.exceptions.TravelAssistException;
+
 public class JsonLookupException extends TravelAssistException {
 	private static final long serialVersionUID = 1L;
 
-	private String errorMessage;
-
 	public JsonLookupException(String message) {
-		this.errorMessage = message;
+		super(message);
+		// TODO Auto-generated constructor stub
 	}
 
-	@Override
-	public String getMessage() {
-		return this.errorMessage;
-	}
 }
