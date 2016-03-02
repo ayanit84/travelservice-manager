@@ -1,14 +1,14 @@
-package com.infosys.hackathon.travelservice.json.processors.filters;
+package com.infosys.hackathon.travelservice.json.processors.filters.directory;
 
 import org.springframework.cglib.core.Predicate;
 
 import com.infosys.hackathon.services.directory.EmployeeOfficeAddress;
 
-public class StatePredicate implements Predicate {
+public class CountryPredicate implements Predicate {
 
 	private String expectedValue;
 
-	public StatePredicate(String expectedValue) {
+	public CountryPredicate(String expectedValue) {
 		super();
 		this.expectedValue = expectedValue;
 	}
@@ -16,7 +16,7 @@ public class StatePredicate implements Predicate {
 	@Override
 	public boolean evaluate(Object object) {
 		EmployeeOfficeAddress ofc = (EmployeeOfficeAddress) object;
-		return ofc.getState().equals(expectedValue);
+		return ofc.getCountry().equals(expectedValue);
 	}
 
 }

@@ -14,7 +14,7 @@ import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
 import com.infosys.hackathon.travelservice.exceptions.JsonLookupException;
 import com.infosys.hackathon.travelservice.json.containers.EmployeeDirectoryInformationContainer;
 import com.infosys.hackathon.travelservice.json.processors.JsonProcessor;
-import com.infosys.hackathon.travelservice.json.processors.filters.OfficeIdPredicate;
+import com.infosys.hackathon.travelservice.json.processors.filters.directory.OfficeIdPredicate;
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
 @Component

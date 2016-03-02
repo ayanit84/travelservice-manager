@@ -14,9 +14,9 @@ import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
 import com.infosys.hackathon.travelservice.exceptions.JsonLookupException;
 import com.infosys.hackathon.travelservice.json.containers.EmployeeOfficeAddressContainer;
 import com.infosys.hackathon.travelservice.json.processors.JsonProcessor;
-import com.infosys.hackathon.travelservice.json.processors.filters.CityPredicate;
-import com.infosys.hackathon.travelservice.json.processors.filters.CountryPredicate;
-import com.infosys.hackathon.travelservice.json.processors.filters.StatePredicate;
+import com.infosys.hackathon.travelservice.json.processors.filters.directory.CityPredicate;
+import com.infosys.hackathon.travelservice.json.processors.filters.directory.CountryPredicate;
+import com.infosys.hackathon.travelservice.json.processors.filters.directory.StatePredicate;
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
 @Component
