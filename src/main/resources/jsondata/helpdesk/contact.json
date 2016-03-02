@@ -1,0 +1,53 @@
+{
+	"countries":[
+	{
+		"country" : "us",
+		"countryHead":"680401",
+		"BPHR": "987664",
+		"serviceDesk":{
+			"globalSupportOld":"1888-237-8763",
+			"reachableOld":"T-Mobile",
+			"globalSupportInfy":"1-855-335-4639",
+			"reachableInfy":"All service providers"
+		},
+		"emergencyContacts":{
+			"ambulance":"000",
+			"police":"000",
+			"fireBridge":"000",
+			"hospitals":"Washington Hospital Emergency (510) 797-1111 For Emergency : Dial 911 ",
+			"localDialingCode":"000"
+		},
+		"incident_reporting":{
+			"itSecurityRelated":"1 510-742-3446",
+			"physicalSecurityRelated":"1 510-742-3446",
+			"peopleRelated":"1 510-742-3446"
+			
+		}
+	},
+	{
+		"country" : "in",
+		"countryHead":"180401",
+		"BPHR": "187664",
+		"serviceDesk":{
+			"globalSupportOld":"33554639",
+			"reachableOld":"All service provider",
+			"globalSupportInfy":"(Local STD) 33554639",
+			"reachableInfy":"All service providers"
+		},
+		"emergencyContacts":{
+			"ambulance":"102",
+			"police":"100",
+			"fireBridge":"101",
+			"hospitals":"6661016 Apollo Hospitals",
+			"localDialingCode":"0674"
+		},
+		"incidentReporting":{
+			"itSecurityRelated":"99370-44444 (CCD 24x7 Support)",
+			"physicalSecurityRelated":"47777, 47444, 2320088 (Security Helpdesk)",
+			"peopleRelated":" 9776023210 (Bobby Patnaik)"
+			
+		}
+	}
+	]
+	
+}
