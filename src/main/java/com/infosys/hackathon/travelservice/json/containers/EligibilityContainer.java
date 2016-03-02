@@ -1,44 +1,31 @@
 package com.infosys.hackathon.travelservice.json.containers;
 
-import java.util.Map;
+import java.util.List;
 
 import com.infosys.hackathon.services.JsonContainer;
-import com.infosys.hackathon.services.directory.Policy.EligibilityInformation;
+import com.infosys.hackathon.services.policy.EligibilityInformation;
 
 public class EligibilityContainer implements JsonContainer {
 
-	private Map<String, Integer> eligibilityCriteria;
-	private EligibilityInformation eligibilityInformation;
+	private List<EligibilityInformation> eligibility;
 
-	public EligibilityInformation getEligibilityInformation() {
-		return eligibilityInformation;
+	public List<EligibilityInformation> getEligibility() {
+		return eligibility;
 	}
 
-	public Map<String, Integer> getEligibilityCriteria() {
-		return eligibilityCriteria;
+	public void setEligibility(List<EligibilityInformation> eligibility) {
+		this.eligibility = eligibility;
 	}
 
-	public void setEligibilityCriteria(Map<String, Integer> eligibilityCriteria) {
-		this.eligibilityCriteria = eligibilityCriteria;
-	}
-
-	public void setEligibilityInformation(
-			EligibilityInformation eligibilityInformation) {
-		this.eligibilityInformation = eligibilityInformation;
-	}
-
-	public EligibilityContainer(Map<String, Integer> eligibilityCriteria,
-			EligibilityInformation eligibilityInformation) {
+	public EligibilityContainer(List<EligibilityInformation> eligibility) {
 		super();
-		this.eligibilityCriteria = eligibilityCriteria;
-		this.eligibilityInformation = eligibilityInformation;
+		this.eligibility = eligibility;
 	}
 
-	@Override
-	public String toString() {
-		return "EligibilityContainer [eligibilityCriteria="
-				+ eligibilityCriteria + ", eligibilityInformation="
-				+ eligibilityInformation + "]";
+	public EligibilityContainer() {
+		super();
 	}
+	
+	
 
 }

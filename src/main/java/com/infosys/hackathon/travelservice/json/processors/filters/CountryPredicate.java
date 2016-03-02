@@ -3,6 +3,7 @@ package com.infosys.hackathon.travelservice.json.processors.filters;
 import org.springframework.cglib.core.Predicate;
 
 import com.infosys.hackathon.services.directory.EmployeeOfficeAddress;
+import com.infosys.hackathon.services.policy.EligibilityInformation;
 
 public class CountryPredicate implements Predicate {
 
@@ -15,8 +16,16 @@ public class CountryPredicate implements Predicate {
 
 	@Override
 	public boolean evaluate(Object object) {
-		EmployeeOfficeAddress ofc = (EmployeeOfficeAddress) object;
-		return ofc.getCountry().equals(expectedValue);
+		boolean retVal = false;
+		if (object instanceof EmployeeOfficeAddress) {
+			EmployeeOfficeAddress ofc = (EmployeeOfficeAddress) object;
+			retVal = ofc.getCountry().equals(expectedValue);
+		} else if (object instanceof EligibilityInformation) {
+			EligibilityInformation data = (EligibilityInformation) object;
+			retVal = data.getCountry().equals(expectedValue);
+		}
+		
+		return retVal;
 	}
 
 }
