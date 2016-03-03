@@ -14,6 +14,7 @@ import com.infosys.hackathon.travelservice.exceptions.JsonDatabaseException;
 import com.infosys.hackathon.travelservice.exceptions.JsonLookupException;
 import com.infosys.hackathon.travelservice.json.containers.EmployeeDirectoryInformationContainer;
 import com.infosys.hackathon.travelservice.json.processors.JsonProcessor;
+import com.infosys.hackathon.travelservice.json.processors.filters.directory.EmployeeIdPredicate;
 import com.infosys.hackathon.travelservice.json.processors.filters.directory.OfficeIdPredicate;
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
@@ -60,6 +61,19 @@ public class DirectoryEmployeeJsonProcessor
 					filteredEmployees,
 					new OfficeIdPredicate((Integer) searchParams
 							.get(SearchParameter.officeId.getKey())));
+		} catch (Exception e) {
+			throw new JsonLookupException(e.getMessage());
+		}
+		return filteredEmployees;
+	}
+	
+	public List<EmployeeDirectoryInformation> lookupEmp(
+			Map<String, Object> searchParams) throws JsonLookupException {
+		List<EmployeeDirectoryInformation> filteredEmployees = null;
+		try {
+			filteredEmployees = new ArrayList<EmployeeDirectoryInformation>(
+					getData());
+			CollectionUtils.filter(filteredEmployees,new EmployeeIdPredicate((Integer) searchParams.get(SearchParameter.EmpId.getKey())));
 		} catch (Exception e) {
 			throw new JsonLookupException(e.getMessage());
 		}

@@ -4,7 +4,7 @@
       "firstName": "Amit P",
       "lastName": "Kumar",
       "jobLevel": "4",
-      "empNo": "123451",
+      "empNo": 123451,
       "phones": {
         "home": "06742589647",
         "mobile": "9568745219",
@@ -22,7 +22,7 @@
       "firstName": "sumit P",
       "lastName": "Kumar",
       "jobLevel": "5",
-      "empNo": "123452",
+      "empNo": 123452,
       "phones": {
         "home": "06742589756",
         "mobile": "9568745258",
@@ -35,6 +35,42 @@
       "Unit": "MFG",
       "Designation": "Technology Analyst",
       "officeId": "57"
+    },
+    {
+      "firstName": "Gitanjali",
+      "lastName": "Kumari",
+      "jobLevel": "7",
+      "empNo": 123454,
+      "phones": {
+        "home": "06742589756",
+        "mobile": "9568745258",
+        "office": "123-159-426"
+      },
+      "emails": {
+        "main": "sumit_p_kumari@infosys.com",
+        "client": "sumit_p_kumar@apple.com"
+      },
+      "unit": "MFG",
+      "designation": "BP HR",
+      "officeId": "57"
+    },
+    {
+      "firstName": "Ragav",
+      "lastName": "Kumar",
+      "jobLevel": "7",
+      "empNo": 123455,
+      "phones": {
+        "home": "06742589756",
+        "mobile": "9568745258",
+        "office": "123-159-426"
+      },
+      "emails": {
+        "main": "sumit_p_kumar@infosys.com",
+        "client": "sumit_p_kumar@apple.com"
+      },
+      "unit": "MFG",
+      "designation": "Head of Country",
+      "officeId": "58"
     }
   ]
 }
