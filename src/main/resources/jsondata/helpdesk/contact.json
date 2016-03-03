@@ -17,7 +17,7 @@
 			"hospitals":"Washington Hospital Emergency (510) 797-1111 For Emergency : Dial 911 ",
 			"localDialingCode":"000"
 		},
-		"incident_reporting":{
+		"incidentReporting":{
 			"itSecurityRelated":"1 510-742-3446",
 			"physicalSecurityRelated":"1 510-742-3446",
 			"peopleRelated":"1 510-742-3446"
