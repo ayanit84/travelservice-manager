@@ -78,6 +78,13 @@ public class EligibilityJsonProcessor implements
 		return filteredEligibilityInformation;
 	}
 	
+	public EligibilityInformation getEligibilityInformation(Map<String, Object> searchParams) throws JsonLookupException{
+		List<EligibilityInformation> eligibilityInformations = lookup(searchParams);
+				
+		return  eligibilityInformations != null ? eligibilityInformations.get(0): null;
+	}
+	
+	
 	public static void main(String[] args) {
 		try {
 			EligibilityJsonProcessor proc = new EligibilityJsonProcessor();
