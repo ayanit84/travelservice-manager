@@ -1,7 +1,7 @@
 {
   "offices": [
     {
-      "officeId": "1",
+      "officeId": 1,
       "addressLine": "Plot No. E / 4, Info City",
       "city": "Bhubaneswar",
       "state": "Odisha",
@@ -11,7 +11,7 @@
       "Fax": "+91 674 232 0100"
     },
     {
-      "officeId": "2",
+      "officeId": 2,
       "addressLine": "Electronics City, Hosur Road",
       "city": "Bangalore",
       "state": "Karnataka",
@@ -21,17 +21,17 @@
       "Fax": "+91 80 2852 2411"
     },
     {
-      "officeId": "3",
+      "officeId": 3,
       "addressLine": "6100, Tennyson Parkway,Suite 200",
-      "city": "Plano",
-      "state": "Texas",
+      "city": "plano",
+      "state": "tx",
       "country": "us",
       "zip": "75024",
       "Phone": "+1 469 229 9400",
       "Fax": "+1 469 518 3858"
     },
     {
-      "officeId": "4",
+      "officeId": 4,
       "addressLine": "14th and 15th Floor ,10 Upper Bank Street",
       "city": "Canary Wharf",
       "state": "London",
@@ -41,7 +41,7 @@
       "Fax": "+44 20 7715 3301 "
     },
     {
-      "officeId": "5",
+      "officeId": 5,
       "addressLine": "Level 14 ,116 Adelaide Street",
       "city": "Brisbane",
       "state": "Queensland",
@@ -51,7 +51,7 @@
       "Fax": "+61 7 3231 9899"
     },
     {
-      "officeId": "6",
+      "officeId": 6,
       "addressLine": "04-01/06, 1 Changi Business Park",
       "city": "Crescent",
       "state": "Singapore",
@@ -61,7 +61,7 @@
       "Fax": "+65 6572 8405"
     },
     {
-      "officeId": "7",
+      "officeId": 7,
       "addressLine": "Tour Opus 12, 4th Floor,77 Esplanade du General",
       "city": "de Gaulle",
       "state": "Paris",
@@ -71,7 +71,7 @@
       "Fax": "+33 1 56 39 12 01"
     },
     {
-      "officeId": "8",
+      "officeId": 8,
       "addressLine": "Opernturm, Bockenheimer ,Landstrade 2-4",
       "city": "am Main",
       "state": "Frankfurt",
@@ -81,7 +81,7 @@
       "Fax": "+49 (0)69 269566 200 "
     },
     {
-      "officeId": "9",
+      "officeId": 9,
       "addressLine": "506, Liberty House, DIFC",
       "city": "Dubai",
       "state": "Dubai",
@@ -91,7 +91,7 @@
       "Fax": "+971 4 508 0225"
     },
     {
-      "officeId": "10",
+      "officeId": 10,
       "addressLine": "4/430, 4.Lesnoy Pereulok",
       "city": "Moscow",
       "state": "Moscow",

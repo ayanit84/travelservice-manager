@@ -1,130 +1,140 @@
 {
   "countries": [
     {
- 		"code" : "us",
-        "name": "United States of America",
-        "states" : [
-        	{
-	        	"code" : "az",
-	        	"name" : "Arizona",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "phoenix",
-	        			"name" : "Phoenix"
-	        		},
-	        		{
-	        			"code" : "tucson",
-	        			"name" : "Tucson"
-	        		}
-        		]
-        	},
-        	{
-	        	"code" : "il",
-	        	"name" : "Illinois",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "cairo",
-	        			"name" : "Cairo"
-	        		},
-	        		{
-	        			"code" : "chicago",
-	        			"name" : "Chicago"
-	        		},
-	        		{
-	        			"code" : "springfield",
-	        			"name" : "Springfield"
-	        		}
-        		]
-        	},
-        	{
-	        	"code" : "ca",
-	        	"name" : "California",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "losangeles",
-	        			"name" : "Los Angeles"
-	        		},
-	        		{
-	        			"code" : "sanfrancisco",
-	        			"name" : "San Francisco"
-	        		},
-	        		{
-	        			"code" : "sandiego",
-	        			"name" : "San Diego"
-	        		}
-        		]
-        	}
-        ]
+      "code": "us",
+      "name": "United States of America",
+      "states": [
+        {
+          "code": "az",
+          "name": "Arizona",
+          "cities": [
+            {
+              "code": "phoenix",
+              "name": "Phoenix"
+            },
+            {
+              "code": "tucson",
+              "name": "Tucson"
+            }
+          ]
+        },
+        {
+          "code": "tx",
+          "name": "Texas",
+          "cities": [
+            {
+              "code": "plano",
+              "name": "Plano"
+            }            
+          ]
+        }, 
+        {
+          "code": "il",
+          "name": "Illinois",
+          "cities": [
+            {
+              "code": "cairo",
+              "name": "Cairo"
+            },
+            {
+              "code": "chicago",
+              "name": "Chicago"
+            },
+            {
+              "code": "springfield",
+              "name": "Springfield"
+            }
+          ]
+        },
+        {
+          "code": "ca",
+          "name": "California",
+          "cities": [
+            {
+              "code": "losangeles",
+              "name": "Los Angeles"
+            },
+            {
+              "code": "sanfrancisco",
+              "name": "San Francisco"
+            },
+            {
+              "code": "sandiego",
+              "name": "San Diego"
+            }
+          ]
+        }
+      ]
     },
     {
- 		"code" : "in",
-        "name": "India",
-        "states" : [
-        	{
-	        	"code" : "ka",
-	        	"name" : "Karnataka",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "bengaluru",
-	        			"name" : "Bengaluru"
-	        		},
-	        		{
-	        			"code" : "mysore",
-	        			"name" : "Mysore"
-	        		}
-        		]
-        	},
-        	{
-	        	"code" : "od",
-	        	"name" : "Odisha",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "bhubaneswar",
-	        			"name" : "Bhubaneswar"
-	        		}
-        		]
-        	},
-        	{
-	        	"code" : "ap",
-	        	"name" : "Andhra Pradesh",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "hyderabad",
-	        			"name" : "Hyderabad"
-	        		}
-        		]
-        	}
-        ]
+      "code": "in",
+      "name": "India",
+      "states": [
+        {
+          "code": "ka",
+          "name": "Karnataka",
+          "cities": [
+            {
+              "code": "bengaluru",
+              "name": "Bengaluru"
+            },
+            {
+              "code": "mysore",
+              "name": "Mysore"
+            }
+          ]
+        },
+        {
+          "code": "od",
+          "name": "Odisha",
+          "cities": [
+            {
+              "code": "bhubaneswar",
+              "name": "Bhubaneswar"
+            }
+          ]
+        },
+        {
+          "code": "ap",
+          "name": "Andhra Pradesh",
+          "cities": [
+            {
+              "code": "hyderabad",
+              "name": "Hyderabad"
+            }
+          ]
+        }
+      ]
     },
     {
- 		"code" : "uk",
-        "name": "United Kingdom",
-        "states" : [
-        	{
-	        	"code" : "london",
-	        	"name" : "London",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "london",
-	        			"name" : "London"
-	        		}
-        		]
-        	},
-        	{
-	        	"code" : "northwest",
-	        	"name" : "North West England",
-	        	"cities" : [ 
-	        		{
-	        			"code" : "liverpool",
-	        			"name" : "Liverpool"
-	        		},
-	        		{
-	        			"code" : "manchester",
-	        			"name" : "Manchester"
-	        		}
-        		]
-        	}
-        ]
+      "code": "uk",
+      "name": "United Kingdom",
+      "states": [
+        {
+          "code": "london",
+          "name": "London",
+          "cities": [
+            {
+              "code": "london",
+              "name": "London"
+            }
+          ]
+        },
+        {
+          "code": "northwest",
+          "name": "North West England",
+          "cities": [
+            {
+              "code": "liverpool",
+              "name": "Liverpool"
+            },
+            {
+              "code": "manchester",
+              "name": "Manchester"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
