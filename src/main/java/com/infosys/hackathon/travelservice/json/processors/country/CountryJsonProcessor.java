@@ -21,8 +21,8 @@ import com.infosys.hackathon.travelservice.json.processors.filters.country.Count
 import com.infosys.hackathon.travelservice.json.util.JsonLoader;
 
 @Component
-public class CountryJsonProcessor implements
-		JsonProcessor<CountryContainer, CountryDetails> {
+public class CountryJsonProcessor
+	implements JsonProcessor<CountryContainer, CountryDetails> {
 
 	private static final String JSON_DATABASE = "jsondata/country/country.json";
 
@@ -32,7 +32,7 @@ public class CountryJsonProcessor implements
 	public CountryJsonProcessor() throws JsonDatabaseException {
 		this.jsonLoader = new JsonLoader<CountryContainer>();
 		this.jsonContainer = this.jsonLoader.load(JSON_DATABASE,
-				CountryContainer.class);
+			CountryContainer.class);
 	}
 
 	@Override
@@ -52,12 +52,12 @@ public class CountryJsonProcessor implements
 
 	@Override
 	public List<CountryDetails> lookup(Map<String, Object> searchParams)
-			throws JsonLookupException {
+		throws JsonLookupException {
 		List<CountryDetails> filteredCountry = null;
 		try {
 			filteredCountry = new ArrayList<CountryDetails>(getData());
-			CollectionUtils.filter(filteredCountry, new CountryPredicate(
-					searchParams.get("country").toString()));
+			CollectionUtils.filter(filteredCountry,
+				new CountryPredicate(searchParams.get("country").toString()));
 		} catch (Exception e) {
 			throw new JsonLookupException(e.getMessage());
 		}
@@ -68,41 +68,56 @@ public class CountryJsonProcessor implements
 		List<KeyValuePair> countries = new ArrayList<KeyValuePair>();
 		for (CountryDetails eachCountry : getData()) {
 			KeyValuePair pair = new KeyValuePair(eachCountry.getCode(),
-					eachCountry.getName());
+				eachCountry.getName());
 			countries.add(pair);
 		}
 		return countries;
 	}
 
 	public List<KeyValuePair> getStates(String countryCode)
-			throws CountryNotFoundException {
+		throws CountryNotFoundException {
 		List<KeyValuePair> states = new ArrayList<KeyValuePair>();
 		CountryDetails matchedCountry = findCountry(countryCode);
 
 		for (StateDetails eachState : matchedCountry.getStates()) {
 			KeyValuePair pair = new KeyValuePair(eachState.getCode(),
-					eachState.getName());
+				eachState.getName());
 			states.add(pair);
 		}
 		return states;
 	}
 
 	public List<KeyValuePair> getCities(String countryCode, String stateCode)
-			throws CountryNotFoundException, StateNotFoundException {
+		throws CountryNotFoundException, StateNotFoundException {
 		List<KeyValuePair> cities = new ArrayList<KeyValuePair>();
 		CountryDetails matchedCountry = findCountry(countryCode);
 		StateDetails matchedState = findState(matchedCountry, stateCode);
 
 		for (CityDetails eachCity : matchedState.getCities()) {
 			KeyValuePair pair = new KeyValuePair(eachCity.getCode(),
-					eachCity.getName());
+				eachCity.getName());
 			cities.add(pair);
 		}
 		return cities;
 	}
 
+	public List<KeyValuePair> getAllCities(String countryCode)
+		throws CountryNotFoundException, StateNotFoundException {
+		List<KeyValuePair> cities = new ArrayList<KeyValuePair>();
+		CountryDetails matchedCountry = findCountry(countryCode);
+		List<StateDetails> allStates = matchedCountry.getStates();
+
+		for (StateDetails eachState : allStates) {
+			for (CityDetails eachCity : eachState.getCities()) {
+				cities.add(
+					new KeyValuePair(eachCity.getCode(), eachCity.getName()));
+			}
+		}
+		return cities;
+	}
+
 	private CountryDetails findCountry(String countryCode)
-			throws CountryNotFoundException {
+		throws CountryNotFoundException {
 		CountryDetails matchedCountry = null;
 		for (CountryDetails eachCountry : getData()) {
 			if (eachCountry.getCode().equals(countryCode)) {
@@ -118,7 +133,7 @@ public class CountryJsonProcessor implements
 	}
 
 	private StateDetails findState(CountryDetails countryDetail,
-			String stateCode) throws StateNotFoundException {
+		String stateCode) throws StateNotFoundException {
 		StateDetails matchedState = null;
 		for (StateDetails eachState : countryDetail.getStates()) {
 			if (eachState.getCode().equals(stateCode)) {
@@ -129,7 +144,7 @@ public class CountryJsonProcessor implements
 
 		if (matchedState == null) {
 			throw new StateNotFoundException(stateCode
-					+ " not found under country: " + countryDetail.getCode());
+				+ " not found under country: " + countryDetail.getCode());
 		}
 		return matchedState;
 	}

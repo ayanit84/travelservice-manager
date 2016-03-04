@@ -30,7 +30,7 @@ public class CountryService {
 			response.setDetails(countryJsonProcessor.getCountries());
 			response.setResult(ResultCodes.Success);
 			LOGGER.info("successfully fetched " + response.getDetails().size()
-					+ " countries");
+				+ " countries");
 		} catch (Exception e) {
 			response.setResult(ResultCodes.Failure);
 			LOGGER.error("error while fetching countries " + e.getMessage());
@@ -46,7 +46,7 @@ public class CountryService {
 			response.setDetails(countryJsonProcessor.getStates(country));
 			response.setResult(ResultCodes.Success);
 			LOGGER.info("successfully fetched " + response.getDetails().size()
-					+ " states");
+				+ " states");
 		} catch (CountryNotFoundException e) {
 			response.setResult(ResultCodes.Failure);
 			LOGGER.error("error while fetching states " + e.getMessage());
@@ -56,15 +56,31 @@ public class CountryService {
 
 	@RequestMapping(value = "/cities/{country}/{state}", method = RequestMethod.GET)
 	public CountryServiceResponse fetchCities(@PathVariable String country,
-			@PathVariable String state) {
-		LOGGER.info("fetching all cities for country " + country + ", state "
-				+ state);
+		@PathVariable String state) {
+		LOGGER.info(
+			"fetching all cities for country " + country + ", state " + state);
 		CountryServiceResponse response = new CountryServiceResponse();
 		try {
 			response.setDetails(countryJsonProcessor.getCities(country, state));
 			response.setResult(ResultCodes.Success);
 			LOGGER.info("successfully fetched " + response.getDetails().size()
-					+ " cities");
+				+ " cities");
+		} catch (CountryNotFoundException | StateNotFoundException e) {
+			response.setResult(ResultCodes.Failure);
+			LOGGER.error("error while fetching cities " + e.getMessage());
+		}
+		return response;
+	}
+
+	@RequestMapping(value = "/allcities/{country}", method = RequestMethod.GET)
+	public CountryServiceResponse fetchAllCities(@PathVariable String country) {
+		LOGGER.info("fetching all cities for country " + country);
+		CountryServiceResponse response = new CountryServiceResponse();
+		try {
+			response.setDetails(countryJsonProcessor.getAllCities(country));
+			response.setResult(ResultCodes.Success);
+			LOGGER.info("successfully fetched " + response.getDetails().size()
+				+ " cities");
 		} catch (CountryNotFoundException | StateNotFoundException e) {
 			response.setResult(ResultCodes.Failure);
 			LOGGER.error("error while fetching cities " + e.getMessage());
