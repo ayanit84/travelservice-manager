@@ -1,8 +1,104 @@
 {
-	"offices" : 
-	[ 
-		{ "officeId": "56", "city": "Bhubaneswar", "state": "Odisha", "country": "in", "addressLine": "E/4,Patia", "zip": "751024" },
-		{ "officeId": "57", "city": "Bangalore", "state": "Karnataka", "country": "in", "addressLine": "E/4,Patia", "zip": "751024" },
-		{ "officeId": "58", "city": "phoenix", "state": "az", "country": "us", "addressLine": "E/4,Patia", "zip": "751024" }
-	]
+  "offices": [
+    {
+      "officeId": "1",
+      "addressLine": "Plot No. E / 4, Info City",
+      "city": "Bhubaneswar",
+      "state": "Odisha",
+      "country": "in",
+      "zip": "751024",
+      "Phone": "+91 674 232 0032",
+      "Fax": "+91 674 232 0100"
+    },
+    {
+      "officeId": "2",
+      "addressLine": "Electronics City, Hosur Road",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "in",
+      "zip": "560100",
+      "Phone": "91 80 2852 2405",
+      "Fax": "+91 80 2852 2411"
+    },
+    {
+      "officeId": "3",
+      "addressLine": "6100, Tennyson Parkway,Suite 200",
+      "city": "Plano",
+      "state": "Texas",
+      "country": "us",
+      "zip": "75024",
+      "Phone": "+1 469 229 9400",
+      "Fax": "+1 469 518 3858"
+    },
+    {
+      "officeId": "4",
+      "addressLine": "14th and 15th Floor ,10 Upper Bank Street",
+      "city": "Canary Wharf",
+      "state": "London",
+      "country": "uk",
+      "zip": "E145NP",
+      "Phone": "+44 20 7715 3300",
+      "Fax": "+44 20 7715 3301 "
+    },
+    {
+      "officeId": "5",
+      "addressLine": "Level 14 ,116 Adelaide Street",
+      "city": "Brisbane",
+      "state": "Queensland",
+      "country": "au",
+      "zip": "QLD4000",
+      "Phone": "+61 7 3231 9800",
+      "Fax": "+61 7 3231 9899"
+    },
+    {
+      "officeId": "6",
+      "addressLine": "04-01/06, 1 Changi Business Park",
+      "city": "Crescent",
+      "state": "Singapore",
+      "country": "sg",
+      "zip": "486025",
+      "Phone": "+65 6572 8400",
+      "Fax": "+65 6572 8405"
+    },
+    {
+      "officeId": "7",
+      "addressLine": "Tour Opus 12, 4th Floor,77 Esplanade du General",
+      "city": "de Gaulle",
+      "state": "Paris",
+      "country": "fr",
+      "zip": "92914",
+      "Phone": "+33 1 56 39 12 00",
+      "Fax": "+33 1 56 39 12 01"
+    },
+    {
+      "officeId": "8",
+      "addressLine": "Opernturm, Bockenheimer ,Landstrade 2-4",
+      "city": "am Main",
+      "state": "Frankfurt",
+      "country": "de",
+      "zip": "60306",
+      "Phone": "+49 (0)69 269566 100",
+      "Fax": "+49 (0)69 269566 200 "
+    },
+    {
+      "officeId": "9",
+      "addressLine": "506, Liberty House, DIFC",
+      "city": "Dubai",
+      "state": "Dubai",
+      "country": "ae",
+      "zip": "506846",
+      "Phone": "+971 4 508 0200",
+      "Fax": "+971 4 508 0225"
+    },
+    {
+      "officeId": "10",
+      "addressLine": "4/430, 4.Lesnoy Pereulok",
+      "city": "Moscow",
+      "state": "Moscow",
+      "country": "ru",
+      "zip": "125047",
+      "Phone": "+7 495 642 8710",
+      "Fax": "+7 495 225 8500"
+    }
+  ]
 }
