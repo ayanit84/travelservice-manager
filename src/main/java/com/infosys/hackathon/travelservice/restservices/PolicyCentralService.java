@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,9 +27,9 @@ public class PolicyCentralService {
 	@Autowired
 	private EligibilityJsonProcessor eligibilityJsonProcessor;
 
-	@RequestMapping(value = "/details", method = RequestMethod.GET)
-	public PolicyDetailsResponse getPolicyDetails(@RequestParam String country,
-			@RequestParam String jobLevel) {
+	@RequestMapping(value = "/details/{country}/{jobLevel}", method = RequestMethod.GET)
+	public PolicyDetailsResponse getPolicyDetails(@PathVariable String country,
+			@PathVariable String jobLevel) {
 		
 		LOGGER.info("getPolicyDetails request: " + country +","+jobLevel);
 

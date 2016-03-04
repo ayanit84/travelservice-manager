@@ -3,18 +3,19 @@
     {
       "country": "us",
       "jobLevel": "4",
-      "leave": "20",
-      "compensation": "71471",
-      "childEducationReimburse": "2500",
-      "medicalExpenseReimburse": "3500"
+      "leave": 20,
+      "compensation": 71471,
+      "childEducationReimburse": 2500,
+      "medicalExpenseReimburse": 3500
+      
     },
     {
       "country": "us",
       "jobLevel": "5",
-      "leave": "20",
-      "compensation": "75000",
-      "childEducationReimburse": "2500",
-      "medicalExpenseReimburse": "3500"
+      "leave": 20,
+      "compensation": 75000,
+      "childEducationReimburse": 2500,
+      "medicalExpenseReimburse": 3500
     }
   ]
 }
