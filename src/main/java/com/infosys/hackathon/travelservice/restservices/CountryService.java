@@ -2,9 +2,9 @@ package com.infosys.hackathon.travelservice.restservices;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.infosys.hackathon.services.ResultCodes;
@@ -38,8 +38,8 @@ public class CountryService {
 		return response;
 	}
 
-	@RequestMapping(value = "/states", method = RequestMethod.GET)
-	public CountryServiceResponse fetchStates(@RequestParam String country) {
+	@RequestMapping(value = "/states/{country}", method = RequestMethod.GET)
+	public CountryServiceResponse fetchStates(@PathVariable String country) {
 		LOGGER.info("fetching all states for country " + country);
 		CountryServiceResponse response = new CountryServiceResponse();
 		try {
@@ -54,9 +54,9 @@ public class CountryService {
 		return response;
 	}
 
-	@RequestMapping(value = "/cities", method = RequestMethod.GET)
-	public CountryServiceResponse fetchCities(@RequestParam String country,
-			@RequestParam String state) {
+	@RequestMapping(value = "/cities/{country}/{state}", method = RequestMethod.GET)
+	public CountryServiceResponse fetchCities(@PathVariable String country,
+			@PathVariable String state) {
 		LOGGER.info("fetching all cities for country " + country + ", state "
 				+ state);
 		CountryServiceResponse response = new CountryServiceResponse();

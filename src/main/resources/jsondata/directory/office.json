@@ -1,8 +1,8 @@
 {
 	"offices" : 
 	[ 
-		{ "officeId": "56", "city": "Bhubaneswar", "state": "Odisha", "country": "IN", "addressLine": "E/4,Patia", "zip": "751024" },
-		{ "officeId": "57", "city": "Bangalore", "state": "Karnataka", "country": "IN", "addressLine": "E/4,Patia", "zip": "751024" },
-		{ "officeId": "58", "city": "Bangalore", "state": "Karnataka", "country": "US", "addressLine": "E/4,Patia", "zip": "751024" }
+		{ "officeId": "56", "city": "Bhubaneswar", "state": "Odisha", "country": "in", "addressLine": "E/4,Patia", "zip": "751024" },
+		{ "officeId": "57", "city": "Bangalore", "state": "Karnataka", "country": "in", "addressLine": "E/4,Patia", "zip": "751024" },
+		{ "officeId": "58", "city": "phoenix", "state": "az", "country": "us", "addressLine": "E/4,Patia", "zip": "751024" }
 	]
 }
