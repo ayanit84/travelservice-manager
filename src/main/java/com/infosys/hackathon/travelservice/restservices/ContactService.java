@@ -7,10 +7,8 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.infosys.hackathon.services.ResultCodes;
@@ -26,8 +24,7 @@ import com.infosys.hackathon.travelservice.json.processors.directory.DirectoryEm
 @RequestMapping("/service/contact")
 public class ContactService {
 
-	private static final Logger LOGGER = Logger
-			.getLogger(ContactService.class);
+	private static final Logger LOGGER = Logger.getLogger(ContactService.class);
 
 	@Autowired
 	private ContactJsonProcessor contactProcessor;
@@ -39,24 +36,28 @@ public class ContactService {
 	public SearchResponse searchContact(@PathVariable String country) {
 		LOGGER.info("search country: " + country);
 		SearchResponse response = new SearchResponse();
-		List<ContactInformation> searchedCountry = null;
 
 		try {
 			Map<String, Object> params = new HashMap<String, Object>();
 			params.put(SearchParameter.Country.getKey(), country);
-			List<ContactInformation> countries = contactProcessor.lookup(params);
-			
+			List<ContactInformation> countries = contactProcessor
+				.lookup(params);
+
 			for (ContactInformation contactInfo : countries) {
 				Map<String, Object> bphrParams = new HashMap<String, Object>();
-				bphrParams.put(SearchParameter.EmpId.getKey(),contactInfo.getbphr());
-				List<EmployeeDirectoryInformation> bphrList = employeeProcessor.lookupEmp(bphrParams);
+				bphrParams.put(SearchParameter.EmpId.getKey(),
+					contactInfo.getbphr());
+				List<EmployeeDirectoryInformation> bphrList = employeeProcessor
+					.lookupEmp(bphrParams);
 				response.setBphr(bphrList.get(0));
-				
+
 				Map<String, Object> hocParams = new HashMap<String, Object>();
-				hocParams.put(SearchParameter.EmpId.getKey(),contactInfo.getCountryHead());
-				List<EmployeeDirectoryInformation> hocList = employeeProcessor.lookupEmp(hocParams);
+				hocParams.put(SearchParameter.EmpId.getKey(),
+					contactInfo.getCountryHead());
+				List<EmployeeDirectoryInformation> hocList = employeeProcessor
+					.lookupEmp(hocParams);
 				response.setCountryHead(hocList.get(0));
-				
+
 			}
 
 			response.setResult(ResultCodes.Success);
