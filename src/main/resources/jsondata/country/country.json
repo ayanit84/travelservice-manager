@@ -25,9 +25,9 @@
             {
               "code": "plano",
               "name": "Plano"
-            }            
+            }
           ]
-        }, 
+        },
         {
           "code": "il",
           "name": "Illinois",
@@ -101,6 +101,101 @@
             {
               "code": "hyderabad",
               "name": "Hyderabad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "au",
+      "name": "Australia",
+      "states": [
+        {
+          "code": "qld",
+          "name": "queensland",
+          "cities": [
+            {
+              "code": "brisbane",
+              "name": "Brisbane"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "sg",
+      "name": "Singapore",
+      "states": [
+        {
+          "code": "sg",
+          "name": "Singapore",
+          "cities": [
+            {
+              "code": "crescent",
+              "name": "Crescent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "de",
+      "name": "Germany",
+      "states": [
+        {
+          "code": "ff",
+          "name": "Frankfurt",
+          "cities": [
+            {
+              "code": "amMain",
+              "name": "amMain"
+            }
+          ]
+        }
+      ]
+    }, {
+      "code": "fr",
+      "name": "France",
+      "states": [
+        {
+          "code": "pa",
+          "name": "Paris",
+          "cities": [
+            {
+              "code": "deGaulle",
+              "name": "deGaulle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ae",
+      "name": "United Arab Emirates",
+      "states": [
+        {
+          "code": "du",
+          "name": "Dubai",
+          "cities": [
+            {
+              "code": "dubai",
+              "name": "dubai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ru",
+      "name": "Russia",
+      "states": [
+        {
+          "code": "ms",
+          "name": "Moscow",
+          "cities": [
+            {
+              "code": "moscow",
+              "name": "moscow"
             }
           ]
         }
