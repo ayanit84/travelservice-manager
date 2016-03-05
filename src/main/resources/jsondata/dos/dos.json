@@ -1,0 +1,15 @@
+{
+  "onsiteActivity": [
+    {
+      "country": "us",
+      "i9SectionCompleted"="false",
+      "panApplied"="false",
+      "bankAccountCreated"="false",
+      "aimsUpdated"="false",
+      "ssnApplied"="false",
+      "payworldUpdated"="false",
+      "enrolledForBenefits"="false",
+      "manadatoryTrainingAttended"="false"
+    }
+  ]
+}
